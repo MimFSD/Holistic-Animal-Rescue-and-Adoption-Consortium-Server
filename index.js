@@ -203,7 +203,7 @@ async function run() {
             res.send(result)
         })
 
-        //=====  Campaign Collection related api =========
+        //=================  Campaign Collection related api =========
 
         //Create a new campaign to DB
         app.post('/create-campaign', verifyToken, async (req, res) => {
