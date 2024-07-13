@@ -353,7 +353,7 @@ async function run() {
             })
         })
 
-        //============  Payment Collection related api   =================
+        //============   Payment Collection related api    =================
 
         // Create a payment data for donated amount in db
         app.post('/donation-payment', verifyToken, async (req, res) => {
@@ -362,7 +362,7 @@ async function run() {
             res.send(result)
         })
 
-                    // get payment data for donated user email 
+                    // get payment data for  donated user email 
         app.get('/donation-payment/:email', verifyToken, async (req, res) => {
             const email = req.params.email;
             const query = { userEmail: email }
@@ -378,7 +378,7 @@ async function run() {
             res.send(result)
         })
 
-            // await client.db("admin").command({ ping: 1 });
+                 // await client.db("admin").command({ ping: 1 });
         console.log("Pinged your deployment. You successfully connected to MongoDB!");
     } finally {
          // Ensures that the client will close when you finish/error
