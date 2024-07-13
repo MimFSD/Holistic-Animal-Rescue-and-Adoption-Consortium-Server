@@ -362,7 +362,7 @@ async function run() {
             res.send(result)
         })
 
-             // get payment data for donated user email 
+                    // get payment data for donated user email 
         app.get('/donation-payment/:email', verifyToken, async (req, res) => {
             const email = req.params.email;
             const query = { userEmail: email }
@@ -370,7 +370,7 @@ async function run() {
             res.send(result)
         })
 
-                  // Delete a payment data from db
+                           // Delete a payment data from db
         app.delete('/delete-donation/:id', verifyToken, async (req, res) => {
             const id = req.params.id;
             const query = { _id: new ObjectId(id) }
