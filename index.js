@@ -203,7 +203,7 @@ async function run() {
             res.send(result)
         })
 
-        //=================  Campaign Collection related api =========
+        //============= Campaign Collection related api =========
 
         //Create a new campaign to DB
         app.post('/create-campaign', verifyToken, async (req, res) => {
@@ -228,7 +228,7 @@ async function run() {
             res.send(result)
         })
 
-        //Delete donation campaign  from DB
+               //Delete donation campaign  from DB
         app.delete('/donation-campaign/:id', verifyToken, verifyAdmin, async (req, res) => {
             const id = req.params.id;
             const query = { _id: new ObjectId(id) }
