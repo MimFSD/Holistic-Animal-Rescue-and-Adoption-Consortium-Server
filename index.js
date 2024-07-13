@@ -273,7 +273,7 @@ async function run() {
             res.send(result)
         })
 
-        // Make true Pause Status of campaign
+                          // Make true Pause Status of campaign
         app.patch(`/pause-true/:id`, verifyToken, async (req, res) => {
             const id = req.params.id;
             const query = { _id: new ObjectId(id) }
@@ -286,7 +286,7 @@ async function run() {
             res.send(result)
         })
 
-        // Make false Pause Status of campaign
+                     // Make false Pause Status of campaign
         app.patch(`/pause-false/:id`, verifyToken, async (req, res) => {
             const id = req.params.id;
             const query = { _id: new ObjectId(id) }
@@ -301,7 +301,7 @@ async function run() {
 
 
 
-        //=================  Adopt Request related api =================
+        //============  Adopt Request related api =================
 
         // create a new adopt in db
         app.post('/adopt-request', verifyToken, async (req, res) => {
