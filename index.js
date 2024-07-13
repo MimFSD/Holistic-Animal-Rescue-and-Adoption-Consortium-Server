@@ -324,7 +324,7 @@ async function run() {
             res.send(result)
         })
 
-        // Accept a adopt request
+                       // Accept a adopt request
         app.patch('/accept-adopt-request/:id', verifyToken, async (req, res) => {
             const id = req.params.id;
             const query = { _id: new ObjectId(id) };
