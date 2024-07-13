@@ -316,7 +316,7 @@ async function run() {
             res.send(result)
         })
 
-        // remove a adoption request from db
+                 // remove a adoption request from db
         app.delete('/adopt-request/:id', verifyToken, async (req, res) => {
             const id = req.params.id
             const query = { _id: new ObjectId(id) }
