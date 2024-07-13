@@ -164,7 +164,7 @@ async function run() {
             }
         });
 
-
+  
 
         // Get all added pet for specific user email
         app.get('/my-added-pets/:email', verifyToken, async (req, res) => {
@@ -172,7 +172,7 @@ async function run() {
             const result = await petCollection.find({ email }).toArray()
             res.send(result)
         })
-
+                   
         // Get single pet data by _id
         app.get('/pet-data/:id', verifyToken, async (req, res) => {
             const id = req.params.id;
@@ -181,7 +181,7 @@ async function run() {
             res.send(result)
         })
 
-        // Update a pet data to db
+                    // Update a pet data to db
         app.patch('/pet-data-update/:id', verifyToken, async (req, res) => {
             const id = req.params.id;
             const pet = req.body;
