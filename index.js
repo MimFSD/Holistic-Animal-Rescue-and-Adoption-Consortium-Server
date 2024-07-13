@@ -151,7 +151,6 @@ async function run() {
             if (category) {
                 query.category = category;
             }
-
             try {
                 const result = await petCollection.find(query)
                     .sort({ category: 1 }) 
