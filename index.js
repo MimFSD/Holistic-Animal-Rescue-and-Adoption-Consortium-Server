@@ -244,7 +244,7 @@ async function run() {
             res.send(result)
         })
 
-        // update campaign total donation amount and donators data after a single payment
+        //  update campaign total donation amount and donators data after a single payment
         app.patch(`/payment-update-campaign/:id`, verifyToken, async (req, res) => {
             const id = req.params.id;
             const updateData = req.body;
@@ -259,7 +259,7 @@ async function run() {
             res.send(result)
         })
 
-        // update campaign data
+                  // update campaign data
         app.patch(`/update-campaign/:id`, verifyToken, async (req, res) => {
             const id = req.params.id;
             const updateData = req.body;
