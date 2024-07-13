@@ -236,7 +236,7 @@ async function run() {
             res.send(result)
         })
 
-        //Get donation campaigns from DB by specific Email
+                         //Get donation campaigns from DB by specific Email
         app.get('/donation-campaigns/:email', verifyToken, async (req, res) => {
             const email = req.params.email;
             const query = { campaignCreator: email }
