@@ -337,7 +337,7 @@ async function run() {
             res.send(result)
         })
 
-        //=================  Payment related api =================
+        //========  Payment related api ================
 
         // Make a payment
         app.post('/payment-intent', verifyToken, async (req, res) => {
