@@ -195,7 +195,7 @@ async function run() {
             res.send(result)
         })
 
-        // Delete a pet data from db
+                    // Delete a pet data from db
         app.delete('/pet-data-delete/:id', verifyToken, async (req, res) => {
             const id = req.params.id;
             const query = { _id: new ObjectId(id) };
@@ -203,7 +203,7 @@ async function run() {
             res.send(result)
         })
 
-        //=================  Campaign Collection related api =================
+        //=====  Campaign Collection related api =========
 
         //Create a new campaign to DB
         app.post('/create-campaign', verifyToken, async (req, res) => {
